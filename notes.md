@@ -1,1 +1,12 @@
   - `poetry shell` will activate a vitural environment. No need for `venv` in what I was doing already.
+  - Data Frames are 2 dimensional
+  - Each column in a Data Frame is a Series
+    - Extra columns do not have to be added as a Series, a List works fine
+  - Data Frame/Series `describe` method can be used to give a summary of numerical data/columns using common stats like max/mean/percentiles/etc
+    - `include=[<data type, e.g. object/number]` can be used to force `describe` to provide stats about different data types
+      - Allowed types - [https://pandas.pydata.org/docs/user_guide/basics.html#basics-selectdtypes](https://pandas.pydata.org/docs/user_guide/basics.html#basics-selectdtypes)
+  - `value_counts` produces a histogram or count of instances of values, by default it will use all columns in the frame
+    - Select specific columns with `subset` arg
+  - What is discretization - Continuous data is Measured, while Discrete data is Counted.
+    - Put data into categories or bins, e.g. weight = light (under 50kg), midheavy (50-100kg), heavy (over 100kg)
+      - This is instead of the underlying continuous data which is could be infinite (weight is a good example, something could be any weight)
