@@ -1,0 +1,1 @@
+  - `poetry shell` will activate a vitural environment. No need for `venv` in what I was doing already.
