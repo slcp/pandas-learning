@@ -14,3 +14,11 @@
   - There are element-wise and vector-wise operations available
     - Element-wise operations operate on each element individually and generally slower, a lot of functionality is provided by `numpy` under `pandas` that facilitate vector-wise operations of common use cases, e.g. sum, mean, calculations, etc
     - Vector-wise operations operate on an entire column/row/series at once and are more what `pandas` is geared towards, these operations are also significantly faster
+  - Indexes
+    - By default `pandas` creates a 0 based, integer index
+    - Indexes are the address of your data in your data structure
+    - Indexes are important for data visualisation and particularly for time series data
+    - Labelling indexes is useful because the use of `.loc[]` with labels is a powerful way to locate data
+    - MultiIndex?
+  - What is a Panel?
+    - Wide column representation, 3 dimensional. DEPRECATED

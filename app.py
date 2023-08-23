@@ -98,3 +98,38 @@ if __name__ == "__main__":
     # print("Not sure what to call this")
     # df[["Age", "Name"]] = df[["Name", "Age"]]
     # print(df.head(5))
+
+    print("Shape")
+    # The dimensions for the DataFrame, e.g. (2, 3) = 2 rows, 3 columns/features of the row dimension
+    # In theory a 4 dimensional array would produce something like (2 (row), 3 (column), 6 (next), 1 (next))
+    print(f'Rows: {df.shape[0]}, Columns: {df.shape[1]}')
+
+    print("Index")
+    df.index.name = "INamedAnIndex"
+    print(df.head(5))
+    print(df.index)
+    print(df.columns)
+
+    print("Filtering")
+    print(df[df["Age"] > 50])
+
+    print("Loc/Iloc")
+    # Operates on the index label to retrieve data, not the numerical index
+    # Column extraction can be used with loc
+    labelled_index_df = df.copy()
+    labelled_index_df.index = ["A", "B", "C", "D", "E"]
+    # Default or numerical index values can also be used as labels
+    print(df.loc[1])
+    print(labelled_index_df.loc[["A"], "Age"])
+    print(labelled_index_df.loc[["A"]])
+    print(labelled_index_df.loc["A", "Age"])
+    print(labelled_index_df.loc["A"])
+    print(labelled_index_df.loc[labelled_index_df["Age"] > 50])
+    print(labelled_index_df.loc["A":"D", "Age"])
+    print(labelled_index_df.loc["A":"D"])
+
+    # Operates strictly on the numerical index to retrieve data, even if the index has labels
+    # Column extraction cannot be used with iloc or something like df.loc[df["Age"] > 50]
+    print(df.iloc[[0]])
+    print(df.iloc[0])
+    print(df.iloc[0:3])
