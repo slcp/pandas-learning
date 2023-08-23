@@ -8,5 +8,9 @@
   - `value_counts` produces a histogram or count of instances of values, by default it will use all columns in the frame
     - Select specific columns with `subset` arg
   - What is discretization - Continuous data is Measured, while Discrete data is Counted.
+    - AKA binning, discrete binning, quantization
     - Put data into categories or bins, e.g. weight = light (under 50kg), midheavy (50-100kg), heavy (over 100kg)
       - This is instead of the underlying continuous data which is could be infinite (weight is a good example, something could be any weight)
+  - There are element-wise and vector-wise operations available
+    - Element-wise operations operate on each element individually and generally slower, a lot of functionality is provided by `numpy` under `pandas` that facilitate vector-wise operations of common use cases, e.g. sum, mean, calculations, etc
+    - Vector-wise operations operate on an entire column/row/series at once and are more what `pandas` is geared towards, these operations are also significantly faster
